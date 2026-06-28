@@ -1,27 +1,43 @@
 export default class EventBus{
 
-    constructor(){
+constructor(){
 
-        this.listeners={};
+this.events={};
 
-    }
+}
 
-    subscribe(event,callback){
+subscribe(event,callback){
 
-        if(!this.listeners[event])
+if(!this.events[event])
 
-            this.listeners[event]=[];
+this.events[event]=[];
 
-        this.listeners[event].push(callback);
+this.events[event].push(callback);
 
-    }
+}
 
-    publish(event,data){
+publish(event,data){
 
-        if(!this.listeners[event]) return;
+if(!this.events[event])
 
-        this.listeners[event].forEach(cb=>cb(data));
+return;
 
-    }
+this.events[event].forEach(callback=>callback(data));
+
+}
+
+unsubscribe(event,callback){
+
+if(!this.events[event])
+
+return;
+
+this.events[event]=
+
+this.events[event]
+
+.filter(c=>c!==callback);
+
+}
 
 }
