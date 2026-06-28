@@ -14,6 +14,8 @@ import Logger from "./Logger.js";
 
 import PatientSelector from "../ui/PatientSelector.js";
 
+import EMRModule from "../plugins/emr/EMRModule.js";
+
 import DashboardModule
 from "../plugins/dashboard/DashboardModule.js";
 
@@ -112,6 +114,7 @@ this.patientSelector.initialize();
 
         this.moduleManager.register(
 
+            new EMRModule( 
             new DashboardModule(
                 this.services
             )
