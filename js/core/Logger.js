@@ -1,33 +1,59 @@
 export default{
 
-    initialize(){
+info(message){
 
-        console.clear();
+console.log(
 
-    },
+"%cINFO",
 
-    info(m){
+"color:#2196F3;font-weight:bold",
 
-        console.log("%cINFO","color:#38bdf8",m);
+message
 
-    },
+);
 
-    success(m){
+},
 
-        console.log("%cSUCCESS","color:#10b981",m);
+success(message){
 
-    },
+console.log(
 
-    warning(m){
+"%cSUCCESS",
 
-        console.log("%cWARNING","color:#f59e0b",m);
+"color:#4CAF50;font-weight:bold",
 
-    },
+message
 
-    error(m){
+);
 
-        console.log("%cERROR","color:#ef4444",m);
+},
 
-    }
+warning(message){
+
+console.log(
+
+"%cWARNING",
+
+"color:#FFC107;font-weight:bold",
+
+message
+
+);
+
+},
+
+error(message){
+
+console.log(
+
+"%cERROR",
+
+"color:#F44336;font-weight:bold",
+
+message
+
+);
+
+}
 
 }
