@@ -4,6 +4,8 @@ import EventBus from "./EventBus.js";
 
 import ServiceRegistry from "./ServiceRegistry.js";
 
+import PatientService from "../services/PatientService.js";
+
 import ModuleManager from "./ModuleManager.js";
 
 import Router from "./Router.js";
@@ -55,6 +57,9 @@ export default class App {
         await this.moduleManager
             .initializeAll();
 
+        await this.patientService
+            .loadDatabase();
+        
         this.router.initialize();
 
         document
@@ -71,14 +76,20 @@ export default class App {
 
     registerCoreServices() {
 
+        this.patientService=
+           new PatientService(
+            this.store,
+            this.events
+        );
+        
         this.services.register(
-            "store",
+            "patient",
             this.store
         );
 
         this.services.register(
-            "events",
-            this.events
+            "patientService",
+            this.patientService
         );
 
     }
