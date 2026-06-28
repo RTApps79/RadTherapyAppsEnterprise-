@@ -1,0 +1,189 @@
+/* DICOM Viewer Styles */
+
+.dicom-viewer {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: #1a1a1a;
+    color: #ffffff;
+    padding: 20px;
+}
+
+.dicom-header {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #0066cc;
+    padding-bottom: 10px;
+}
+
+.dicom-header h1 {
+    margin: 0;
+    font-size: 24px;
+    color: #0088ff;
+}
+
+.dicom-controls {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    background: #2a2a2a;
+    border-radius: 5px;
+}
+
+.control-group {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+}
+
+.control-group label {
+    white-space: nowrap;
+    font-weight: bold;
+    min-width: 60px;
+}
+
+.control-group select {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #0066cc;
+    border-radius: 4px;
+    background: #1a1a1a;
+    color: #ffffff;
+}
+
+.btn-control {
+    padding: 8px 12px;
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.btn-control:hover {
+    background: #0088ff;
+}
+
+.dicom-canvas-container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #0a0a0a;
+    border: 2px solid #0066cc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    overflow: hidden;
+    position: relative;
+}
+
+.dicom-canvas {
+    max-width: 100%;
+    max-height: 100%;
+    image-rendering: pixelated;
+    image-rendering: crisp-edges;
+}
+
+.dicom-info {
+    background: #2a2a2a;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 10px;
+    border-left: 4px solid #0066cc;
+}
+
+.dicom-info p {
+    margin: 5px 0;
+    font-size: 14px;
+}
+
+.dicom-navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 15px;
+    background: #2a2a2a;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.nav-btn {
+    padding: 8px 16px;
+    background: #0066cc;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+}
+
+.nav-btn:hover {
+    background: #0088ff;
+}
+
+#imageCounter {
+    font-weight: bold;
+    color: #0088ff;
+    min-width: 80px;
+    text-align: center;
+}
+
+.file-upload {
+    display: flex;
+    gap: 10px;
+    padding: 15px;
+    background: #2a2a2a;
+    border-radius: 5px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.file-upload label {
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+.file-upload input[type="file"] {
+    flex: 1;
+    min-width: 200px;
+    padding: 8px;
+    background: #1a1a1a;
+    border: 1px solid #0066cc;
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+.btn-primary {
+    padding: 8px 16px;
+    background: #00aa00;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+    white-space: nowrap;
+}
+
+.btn-primary:hover {
+    background: #00dd00;
+}
+
+@media (max-width: 768px) {
+    .dicom-controls {
+        grid-template-columns: 1fr;
+    }
+    
+    .file-upload {
+        flex-direction: column;
+    }
+    
+    .file-upload input[type="file"] {
+        width: 100%;
+    }
+}
