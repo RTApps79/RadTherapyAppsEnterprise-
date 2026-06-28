@@ -1,6 +1,6 @@
 export default{
 
-    VERSION:"4.0 Enterprise",
+    VERSION:"1.0 Enterprise",
 
     BUILD:"2026",
 
