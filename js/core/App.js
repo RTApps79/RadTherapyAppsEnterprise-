@@ -1,49 +1,97 @@
-import Router from "./Router.js";
 import Store from "./Store.js";
+
 import EventBus from "./EventBus.js";
-import ModuleManager from "./ModuleManager.js";
+
 import ServiceRegistry from "./ServiceRegistry.js";
+
+import ModuleManager from "./ModuleManager.js";
+
+import Router from "./Router.js";
+
 import Logger from "./Logger.js";
 
-export default class App{
+import DashboardModule
+from "../plugins/dashboard/DashboardModule.js";
 
-    async initialize(){
+export default class App {
 
-        Logger.initialize();
+    constructor() {
 
-        Logger.info("Starting RadTherapyApps Enterprise");
+        this.store = new Store();
 
-        this.store=new Store();
+        this.events = new EventBus();
 
-        this.events=new EventBus();
-
-        this.services=new ServiceRegistry();
-
-        this.modules=new ModuleManager(
-            this.store,
-            this.events,
-            this.services
-        );
-
-        this.router=new Router(
-            this.modules
-        );
-
-        await this.registerServices();
-
-        await this.modules.loadModules();
-
-        this.router.initialize();
-
-        Logger.success("Application Ready");
+        this.services =
+            new ServiceRegistry();
 
     }
 
-    async registerServices(){
+    async initialize() {
 
-        this.services.register("store",this.store);
+        Logger.info(
+            "Initializing Enterprise..."
+        );
 
-        this.services.register("events",this.events);
+        this.registerCoreServices();
+
+        this.moduleManager =
+            new ModuleManager(
+
+                this.store,
+
+                this.events,
+
+                this.services
+
+            );
+
+        this.router =
+            new Router(
+                this.moduleManager
+            );
+
+        await this.loadPlugins();
+
+        await this.moduleManager
+            .initializeAll();
+
+        this.router.initialize();
+
+        document
+            .getElementById(
+                "loadingScreen"
+            )
+            .style.display = "none";
+
+        Logger.success(
+            "Enterprise Ready"
+        );
+
+    }
+
+    registerCoreServices() {
+
+        this.services.register(
+            "store",
+            this.store
+        );
+
+        this.services.register(
+            "events",
+            this.events
+        );
+
+    }
+
+    async loadPlugins() {
+
+        this.moduleManager.register(
+
+            new DashboardModule(
+                this.services
+            )
+
+        );
 
     }
 
