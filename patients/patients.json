@@ -33,3 +33,63 @@
 "machine":"LINAC 3"
 }
 ]
+"allergies":[
+"Penicillin"
+],
+
+"problems":[
+"Glioblastoma",
+"Hypertension"
+],
+
+"vitals":{
+
+"height":"178 cm",
+
+"weight":"82 kg",
+
+"bp":"132/82",
+
+"pulse":"72",
+
+"temp":"36.8 C"
+
+},
+
+"encounters":[
+
+{
+
+"date":"2026-05-21",
+
+"provider":"Dr. Evelyn Reed",
+
+"type":"Consult"
+
+},
+
+{
+
+"date":"2026-05-28",
+
+"provider":"Dr. Evelyn Reed",
+
+"type":"CT Simulation"
+
+}
+
+],
+
+"notes":[
+
+{
+
+"author":"Radiation Oncology",
+
+"date":"2026-05-28",
+
+"text":"Patient tolerated CT simulation well. Aquaplast mask fabricated. Isocenter tattoos placed."
+
+}
+
+]
