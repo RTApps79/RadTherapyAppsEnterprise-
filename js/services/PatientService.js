@@ -58,30 +58,36 @@ export default class PatientService{
 
     selectPatient(id){
 
-        const patient=
+const patient=
 
-            this.repository.find(id);
+this.repository.find(id);
 
-        if(!patient)
+if(!patient)
 
-            return;
+return;
 
-        this.store.set(
+this.store.set(
 
-            "currentPatient",
+"currentPatient",
 
-            patient
+patient
 
-        );
+);
 
-        this.events.publish(
+this.events.publish(
 
-            "patientChanged",
+"patientChanged",
 
-            patient
+patient
 
-        );
+);
 
-    }
+document.title=
+
+patient.fullName+
+
+" | RadTherapyApps";
+
+}
 
 }
