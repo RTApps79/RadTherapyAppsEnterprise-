@@ -1,50 +1,183 @@
-import Router from "./Router.js";
-import Store from "./Store.js";
-import EventBus from "./EventBus.js";
-import ModuleManager from "./ModuleManager.js";
-import ServiceRegistry from "./ServiceRegistry.js";
-import Logger from "./Logger.js";
+*{
 
-export default class App{
+margin:0;
 
-    async initialize(){
+padding:0;
 
-        Logger.initialize();
+box-sizing:border-box;
 
-        Logger.info("Starting RadTherapyApps Enterprise");
+font-family:Segoe UI,Arial,sans-serif;
 
-        this.store=new Store();
+}
 
-        this.events=new EventBus();
+body{
 
-        this.services=new ServiceRegistry();
+background:var(--background);
 
-        this.modules=new ModuleManager(
-            this.store,
-            this.events,
-            this.services
-        );
+height:100vh;
 
-        this.router=new Router(
-            this.modules
-        );
+overflow:hidden;
 
-        await this.registerServices();
+}
 
-        await this.modules.loadModules();
+#application{
 
-        this.router.initialize();
+display:grid;
 
-        Logger.success("Application Ready");
+grid-template-columns:260px 1fr;
 
-    }
+grid-template-rows:70px 1fr 32px;
 
-    async registerServices(){
+height:100vh;
 
-        this.services.register("store",this.store);
+}
 
-        this.services.register("events",this.events);
+#topRibbon{
 
-    }
+grid-column:1/3;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+padding:15px;
+
+background:var(--primary);
+
+color:white;
+
+}
+
+.logo{
+
+font-size:24px;
+
+font-weight:bold;
+
+}
+
+#sidebar{
+
+background:#1d2731;
+
+padding:15px;
+
+display:flex;
+
+flex-direction:column;
+
+gap:8px;
+
+overflow:auto;
+
+}
+
+#sidebar button{
+
+padding:12px;
+
+border:none;
+
+border-radius:5px;
+
+cursor:pointer;
+
+background:#34495e;
+
+color:white;
+
+transition:.25s;
+
+}
+
+#sidebar button:hover{
+
+background:#4b6b8d;
+
+}
+
+#workspace{
+
+background:white;
+
+overflow:auto;
+
+padding:20px;
+
+}
+
+#statusBar{
+
+grid-column:1/3;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+padding:0 15px;
+
+background:#222;
+
+color:white;
+
+font-size:13px;
+
+}
+
+#loadingScreen{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+right:0;
+
+bottom:0;
+
+display:flex;
+
+flex-direction:column;
+
+justify-content:center;
+
+align-items:center;
+
+background:white;
+
+z-index:9999;
+
+}
+
+.spinner{
+
+width:60px;
+
+height:60px;
+
+border:6px solid #ddd;
+
+border-top:6px solid var(--primary);
+
+border-radius:50%;
+
+animation:spin 1s linear infinite;
+
+margin-bottom:20px;
+
+}
+
+@keyframes spin{
+
+100%{
+
+transform:rotate(360deg);
+
+}
 
 }
