@@ -12,6 +12,8 @@ import Router from "./Router.js";
 
 import Logger from "./Logger.js";
 
+import PatientSelector from "../ui/PatientSelector.js";
+
 import DashboardModule
 from "../plugins/dashboard/DashboardModule.js";
 
@@ -59,6 +61,13 @@ export default class App {
 
         await this.patientService
             .loadDatabase();
+
+        this.patientSelector=
+           new PatientSelector(
+        this.patientService
+           );
+
+this.patientSelector.initialize();
         
         this.router.initialize();
 
