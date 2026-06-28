@@ -1,47 +1,29 @@
+import EnterpriseState from "./EnterpriseState.js";
+
 export default class Store{
 
-    constructor(){
+constructor(){
 
-        this.state={
+this.state=structuredClone(EnterpriseState);
 
-            patient:null,
+}
 
-            workflow:null,
+get(key){
 
-            simulation:null,
+return this.state[key];
 
-            linac:null,
+}
 
-            beam:null,
+set(key,value){
 
-            dicom:null,
+this.state[key]=value;
 
-            emr:null,
+}
 
-            ois:null,
+update(key,data){
 
-            physics:null,
+Object.assign(this.state[key],data);
 
-            planning:null,
-
-            education:null,
-
-            ui:{}
-
-        };
-
-    }
-
-    set(key,value){
-
-        this.state[key]=value;
-
-    }
-
-    get(key){
-
-        return this.state[key];
-
-    }
+}
 
 }
