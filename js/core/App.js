@@ -92,8 +92,13 @@ this.patientSelector.initialize();
         );
         
         this.services.register(
-            "patient",
+            "store",
             this.store
+        );
+
+        this.services.register(
+            "events",
+            this.events
         );
 
         this.services.register(
