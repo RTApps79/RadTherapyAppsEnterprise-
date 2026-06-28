@@ -1,11 +1,5 @@
-// app.js
-
 import App from "./core/App.js";
 
-window.addEventListener("DOMContentLoaded", async () => {
+const application=new App();
 
-    const app = new App();
-
-    await app.initialize();
-
-});
+application.initialize();
