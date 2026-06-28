@@ -1,22 +1,26 @@
-const EnterpriseState={
+export default{
+
+applicationName:"RadTherapyApps Enterprise",
+
+version:"4.0",
+
+build:"Enterprise",
+
+currentUser:null,
 
 currentPatient:null,
 
-currentCourse:null,
+patientCourse:null,
 
-currentPlan:null,
+activePlan:null,
 
-currentFraction:0,
+activeFraction:0,
 
-selectedMachine:null,
-
-selectedRoom:null,
-
-selectedBeam:null,
-
-currentIsocenter:null,
+workflowStep:"Dashboard",
 
 dicomStudy:null,
+
+dicomSeries:[],
 
 rtStruct:null,
 
@@ -28,34 +32,38 @@ ctVolume:null,
 
 cbctVolume:null,
 
-dvh:null,
-
 doseGrid:null,
 
-structures:[],
+dvh:null,
 
 beams:[],
 
-mlc:[],
+structures:[],
 
-optimizationObjectives:[],
+plans:[],
 
-workflowStep:null,
+linac:{},
 
-score:0,
+physics:{},
 
-errors:[],
+workflow:{},
 
-achievements:[],
+education:{},
 
 notifications:[],
 
-physicsQA:{},
+machineStatus:{},
 
-machineQA:{},
+displaySettings:{
 
-simulationSettings:{},
+theme:"light",
 
-displaySettings:{}
+showDose:true,
+
+showStructures:true,
+
+showLasers:true
+
+}
 
 };
