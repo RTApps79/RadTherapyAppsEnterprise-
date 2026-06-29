@@ -113,7 +113,7 @@ this.patientSelector.initialize();
    async loadPlugins() {
 
         this.moduleManager.register(
-            new EMRModule()
+            new EMRModule(this.services)
         );
 
         this.moduleManager.register(
