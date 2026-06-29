@@ -283,3 +283,40 @@ margin-bottom:8px;
 margin-top:20px;
 
 }
+/* ==========================================================================
+   OIS Module & Treatment Progress UI
+   ========================================================================== */
+
+.oisGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.progressBar {
+  width: 100%;
+  height: 18px;
+  background: #ddd;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 15px 0;
+}
+
+.progressFill {
+  height: 100%;
+  background: #1eb980;
+  transition: width 0.5s ease;
+}
+
+.fractionTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.fractionTable td,
+.fractionTable th {
+  padding: 8px;
+  border: 1px solid #d5d5d5;
+  text-align: left;
+}
