@@ -114,7 +114,7 @@ this.patientSelector.initialize();
 
         this.moduleManager.register(
 
-            new EMRModule( 
+            new EMRModule( )
             new DashboardModule(
                 this.services
             )
