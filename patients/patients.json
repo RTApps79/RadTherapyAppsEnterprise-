@@ -1,95 +1,68 @@
 [
-{
-"id":"1",
-"mrn":"44556",
-"firstName":"John",
-"lastName":"Smith",
-"dob":"1970-07-12",
-"sex":"Male",
-"primaryDiagnosis":"Glioblastoma",
-"physician":"Dr. Evelyn Reed",
-"machine":"LINAC 2"
-},
-{
-"id":"2",
-"mrn":"11289",
-"firstName":"Mary",
-"lastName":"Peterson",
-"dob":"1962-11-18",
-"sex":"Female",
-"primaryDiagnosis":"Breast Cancer",
-"physician":"Dr. Michael Carter",
-"machine":"LINAC 1"
-},
-{
-"id":"3",
-"mrn":"88711",
-"firstName":"James",
-"lastName":"Wilson",
-"dob":"1958-01-21",
-"sex":"Male",
-"primaryDiagnosis":"Prostate Cancer",
-"physician":"Dr. Karen Young",
-"machine":"LINAC 3"
-}
-]
-"allergies":[
-"Penicillin"
-],
-
-"problems":[
-"Glioblastoma",
-"Hypertension"
-],
-
-"vitals":{
-
-"height":"178 cm",
-
-"weight":"82 kg",
-
-"bp":"132/82",
-
-"pulse":"72",
-
-"temp":"36.8 C"
-
-},
-
-"encounters":[
-
-{
-
-"date":"2026-05-21",
-
-"provider":"Dr. Evelyn Reed",
-
-"type":"Consult"
-
-},
-
-{
-
-"date":"2026-05-28",
-
-"provider":"Dr. Evelyn Reed",
-
-"type":"CT Simulation"
-
-}
-
-],
-
-"notes":[
-
-{
-
-"author":"Radiation Oncology",
-
-"date":"2026-05-28",
-
-"text":"Patient tolerated CT simulation well. Aquaplast mask fabricated. Isocenter tattoos placed."
-
-}
-
+  {
+    "id": "1",
+    "mrn": "44556",
+    "firstName": "John",
+    "lastName": "Smith",
+    "dob": "1970-07-12",
+    "sex": "Male",
+    "primaryDiagnosis": "Glioblastoma",
+    "physician": "Dr. Evelyn Reed",
+    "machine": "LINAC 2",
+    "allergies": [
+      "Penicillin"
+    ],
+    "problems": [
+      "Glioblastoma",
+      "Hypertension"
+    ],
+    "vitals": {
+      "height": "178 cm",
+      "weight": "82 kg",
+      "bp": "132/82",
+      "pulse": "72",
+      "temp": "36.8 C"
+    },
+    "encounters": [
+      {
+        "date": "2026-05-21",
+        "provider": "Dr. Evelyn Reed",
+        "type": "Consult"
+      },
+      {
+        "date": "2026-05-28",
+        "provider": "Dr. Evelyn Reed",
+        "type": "CT Simulation"
+      }
+    ],
+    "notes": [
+      {
+        "author": "Radiation Oncology",
+        "date": "2026-05-28",
+        "text": "Patient tolerated CT simulation well. Aquaplast mask fabricated. Isocenter tattoos placed."
+      }
+    ]
+  },
+  {
+    "id": "2",
+    "mrn": "11289",
+    "firstName": "Mary",
+    "lastName": "Peterson",
+    "dob": "1962-11-18",
+    "sex": "Female",
+    "primaryDiagnosis": "Breast Cancer",
+    "physician": "Dr. Michael Carter",
+    "machine": "LINAC 1"
+  },
+  {
+    "id": "3",
+    "mrn": "88711",
+    "firstName": "James",
+    "lastName": "Wilson",
+    "dob": "1958-01-21",
+    "sex": "Male",
+    "primaryDiagnosis": "Prostate Cancer",
+    "physician": "Dr. Karen Young",
+    "machine": "LINAC 3"
+  }
 ]
