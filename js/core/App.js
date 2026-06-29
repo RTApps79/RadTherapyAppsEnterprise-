@@ -16,8 +16,9 @@ import PatientSelector from "../ui/PatientSelector.js";
 
 import EMRModule from "../plugins/emr/EMRModule.js";
 
-import DashboardModule
-from "../plugins/dashboard/DashboardModule.js";
+import OISModule from "../plugins/ois/OISModule.js";
+
+import DashboardModule from "../plugins/dashboard/DashboardModule.js";
 
 export default class App {
 
@@ -117,9 +118,11 @@ this.patientSelector.initialize();
         );
 
         this.moduleManager.register(
-            new DashboardModule(
-                this.services
-            )
+            new OISModule(this.services)
+      );
+      
+       this.moduleManager.register(
+            new DashboardModule(this.services)
         );
 
     }
