@@ -41,6 +41,48 @@
         "date": "2026-05-28",
         "text": "Patient tolerated CT simulation well. Aquaplast mask fabricated. Isocenter tattoos placed."
       }
+    ],
+    "course": {
+      "name": "Course 1",
+      "intent": "Curative"
+    },
+    "prescription": {
+      "totalDose": "6000 cGy",
+      "fractions": 30,
+      "dosePerFraction": "200 cGy",
+      "technique": "VMAT",
+      "energy": "6 MV"
+    },
+    "deliveredFractions": 4,
+    "fractions": [
+      {
+        "number": 1,
+        "date": "2026-06-01",
+        "status": "Completed",
+        "therapist": "Kevin Kindle",
+        "machine": "LINAC 2"
+      },
+      {
+        "number": 2,
+        "date": "2026-06-02",
+        "status": "Completed",
+        "therapist": "Kevin Kindle",
+        "machine": "LINAC 2"
+      },
+      {
+        "number": 3,
+        "date": "2026-06-03",
+        "status": "Completed",
+        "therapist": "Kevin Kindle",
+        "machine": "LINAC 2"
+      },
+      {
+        "number": 4,
+        "date": "2026-06-04",
+        "status": "Completed",
+        "therapist": "Kevin Kindle",
+        "machine": "LINAC 2"
+      }
     ]
   },
   {
