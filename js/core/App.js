@@ -123,3 +123,4 @@ this.patientSelector.initialize();
         );
 
     }
+}
