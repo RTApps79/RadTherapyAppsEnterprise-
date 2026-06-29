@@ -110,17 +110,16 @@ this.patientSelector.initialize();
 
     }
 
-    async loadPlugins() {
+   async loadPlugins() {
 
         this.moduleManager.register(
+            new EMRModule()
+        );
 
-            new EMRModule( )
+        this.moduleManager.register(
             new DashboardModule(
                 this.services
             )
-
         );
 
     }
-
-}
