@@ -1,0 +1,13 @@
+{
+  "name": "rtapps-workspace",
+  "private": true,
+  "version": "1.0.0",
+  "packageManager": "pnpm@10",
+  "scripts": {
+    "dev": "pnpm --filter enterprise dev",
+    "build": "pnpm --filter enterprise build",
+    "preview": "pnpm --filter enterprise preview",
+    "lint": "pnpm --recursive lint",
+    "test": "pnpm --recursive test"
+  }
+}
